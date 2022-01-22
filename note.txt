@@ -1,0 +1,16 @@
+ Setup Laravel Passport
+ - Install package laravel/passport
+ - Di model user use name Laravel/Passport/HasApiTokens; pakai trait dari HasApiTokens
+ - Di AuthServiceProvider use Laravel\Passport\Passport; pakai Passport::routes() di method boot
+ - Ke config/auth pada bagian guards tambah array asosiatif :
+ 'passport' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+            'hash' => false
+        ]
+
+ - Jalankan php artisan passport:Install
+ - Selesai
+
+
+ -method collection di resource class mengembalikan banyak data (berupa array) selain itu hanya satu data
