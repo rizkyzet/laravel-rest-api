@@ -14,13 +14,14 @@ class BooksResource extends JsonResource
      */
     public function toArray($request)
     {
+       
         return [
             'id' => (string) $this->id,
             'type' => 'Books',
             'attributes' => [
                 'name' => $this->name,
                 'author'=>$this->author,
-                'description'=>$this->description,
+                'description'=>$this->whenAppended('description',$this->description),
                 'publication_year'=>$this->publication_year,
                 'created_at' => $this->created_at,
                 'updated_at' => $this->updated_at

@@ -14,3 +14,6 @@
 
 
  -method collection di resource class mengembalikan banyak data (berupa array) selain itu hanya satu data
+
+ - command php artisan make:model book -a (artinya membuat semua file mulai dari controller, migration, factory, seeder, request, api resource, dan sbagainya )
+   kalau -r (artinya membuat semua method yang ada di controller mulai dari index, show, create, store edit, update, delete )
